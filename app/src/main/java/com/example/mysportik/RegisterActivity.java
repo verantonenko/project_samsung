@@ -33,6 +33,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
+
         // Находим кнопку по ID
         ImageButton left = findViewById(R.id.left);
         // Обработчик клика

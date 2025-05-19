@@ -2,6 +2,9 @@ package com.example.mysportik;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,5 +30,14 @@ public class MainActivity extends AppCompatActivity {
         if(FirebaseAuth.getInstance().getCurrentUser()==null){
             startActivity(new Intent( MainActivity.this, LoginActivity.class));
         }
+
+        Button marks = findViewById(R.id.to_marks);
+        marks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, MarksActivity.class));
+                finish();
+            }
+        });
     }
 }
